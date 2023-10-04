@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique e-commerce{% block title %}{% endblock %}</title>
+    <!-- Autres fichiers CSS ou meta tags -->
+</head>
+<body>
+    <header>
+        <!-- Contenu de l'en-tête, par exemple la navigation -->
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Le contenu spécifique à chaque page sera injecté ici -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <!-- Contenu du pied de page -->
+    </footer>
+</body>
+</html>
