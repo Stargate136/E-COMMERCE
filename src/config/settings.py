@@ -19,7 +19,7 @@ import environ
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # ==============================================================================
-# VARIABLES D'ENVIRONNEMENT
+# ENVIRONMENT VARIABLES
 # ==============================================================================
 
 env = environ.Env()
@@ -48,8 +48,9 @@ DATABASES = {
 }
 
 # ==============================================================================
-# FIN DES VARIABLES D'ENVIRONNEMENT
+# END OF ENVIRONMENT VARIABLES
 # ==============================================================================
+
 
 # Application definition
 
@@ -60,6 +61,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    "accounts",
 ]
 
 MIDDLEWARE = [
@@ -133,3 +136,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# ==============================================================================
+# ADDED SETTINGS
+# ==============================================================================
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
